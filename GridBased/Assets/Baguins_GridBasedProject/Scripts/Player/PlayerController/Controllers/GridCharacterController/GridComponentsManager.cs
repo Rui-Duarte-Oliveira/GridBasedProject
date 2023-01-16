@@ -128,7 +128,7 @@ namespace PlayerCore
     {
       _statusTextString = "Current Action Points: " + _targetCharacter.CurrentActionPoints;
 
-      if (TurnManager.Instance.IsCurrentSideActive(_targetCharacter))
+      if (!TurnManager.Instance.IsCurrentSideActive(_targetCharacter))
         _statusTextString += "\n Player Turn";
       else
         _statusTextString += "\n Enemy Turn";
